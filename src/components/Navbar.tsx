@@ -107,12 +107,12 @@ const servicesData = [
 ];
 
 const quickAccess = [
-  { name: "SMS", icon: <FaCommentDots className="text-[#ff4d4d]" />, color: "bg-[#ff4d4d]/10" },
-  { name: "WHATSAPP", icon: <FaWhatsapp className="text-[#25d366]" />, color: "bg-[#25d366]/10" },
-  { name: "WEB", icon: <FaCode className="text-[#3b82f6]" />, color: "bg-[#3b82f6]/10" },
-  { name: "SEO", icon: <FaSearch className="text-[#f59e0b]" />, color: "bg-[#f59e0b]/10" },
-  { name: "SOCIAL", icon: <FaUsers className="text-[#ec4899]" />, color: "bg-[#ec4899]/10" },
-  { name: "QUOTE", icon: <FaFileAlt className="text-[#8b5cf6]" />, color: "bg-[#8b5cf6]/10" },
+  { name: "SMS", icon: <FaCommentDots className="text-[#ff4d4d]" />, color: "bg-[#ff4d4d]/10", href: "/services/sms-service" },
+  { name: "WHATSAPP", icon: <FaWhatsapp className="text-[#25d366]" />, color: "bg-[#25d366]/10", href: "/services/sms-service/whatsapp-business-api" },
+  { name: "WEB", icon: <FaCode className="text-[#3b82f6]" />, color: "bg-[#3b82f6]/10", href: "/services/web-service" },
+  { name: "SEO", icon: <FaSearch className="text-[#f59e0b]" />, color: "bg-[#f59e0b]/10", href: "/services/seo-services" },
+  { name: "SOCIAL", icon: <FaUsers className="text-[#ec4899]" />, color: "bg-[#ec4899]/10", href: "/services/smm-services" },
+  { name: "QUOTE", icon: <FaFileAlt className="text-[#8b5cf6]" />, color: "bg-[#8b5cf6]/10", href: "/packages/custom-quote" },
 ];
 
 export default function Navbar() {
@@ -319,12 +319,17 @@ export default function Navbar() {
                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground mb-4">Quick Access</p>
                   <div className="grid grid-cols-3 gap-3">
                     {quickAccess.map((item, idx) => (
-                      <div key={idx} className="flex flex-col items-center space-y-2 p-3 bg-card border border-border rounded-xl hover:border-primary transition-colors group cursor-pointer shadow-sm">
+                      <Link
+                        key={idx}
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className="flex flex-col items-center space-y-2 p-3 bg-card border border-border rounded-xl hover:border-primary transition-colors group cursor-pointer shadow-sm"
+                      >
                         <div className={`w-10 h-10 ${item.color} rounded-lg flex items-center justify-center text-xl`}>
                           {item.icon}
                         </div>
                         <span className="text-[9px] font-black uppercase tracking-wider">{item.name}</span>
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -371,7 +376,7 @@ export default function Navbar() {
                             {service.subServices.map((sub, sIdx) => (
                               <Link
                                 key={sIdx}
-                                href={service.href}
+                                href={`${service.href}/${sub.name.toLowerCase().replace(/[&()]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}
                                 onClick={() => setIsOpen(false)}
                                 className="flex items-center justify-between pr-4 py-1"
                               >
