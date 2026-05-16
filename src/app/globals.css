@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;
+  /* Corporate Blue */
+  --color-secondary: #0f172a;
+  --color-accent: #6366f1;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-display: var(--font-outfit), ui-sans-serif, system-ui;
+
+  --breakpoint-xs: 375px;
+  --breakpoint-2xl: 1440px;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #f8fafc;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2563eb;
+  --radius: 0.75rem;
+  --background-rgb: 255, 255, 255;
+  --foreground-rgb: 15, 23, 42;
+}
+
+.dark {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --card: #0f172a;
+  --card-foreground: #f8fafc;
+  --popover: #020617;
+  --popover-foreground: #f8fafc;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  --muted: #111827;
+  --muted-foreground: #94a3b8;
+  --accent: #1e293b;
+  --accent-foreground: #f8fafc;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #3b82f6;
+  --background-rgb: 2, 6, 23;
+  --foreground-rgb: 248, 250, 252;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui;
+}
+
+/* Premium Glassmorphism */
+.glass-nav {
+  background: rgba(var(--background-rgb), 0.8);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(var(--foreground-rgb), 0.1);
+  box-shadow:
+    0 10px 30px -10px rgba(0, 0, 0, 0.1),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-nav {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Solid Corporate Styles */
+.btn-premium {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 9999px;
+  /* Pill shape */
+  background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 15px -3px rgba(37, 99, 235, 0.4);
+}
+
+.btn-premium::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  transition: 0.5s;
+}
+
+.btn-premium:hover::before {
+  left: 100%;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.5);
+}
+
+.card-premium {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.card-premium:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.dark .card-premium:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid Dots Background Utility */
+.bg-dot-pattern {
+  mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+}
