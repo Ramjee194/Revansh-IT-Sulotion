@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Linkedin, Briefcase, Target, Users, ArrowRight, ShieldCheck } from "lucide-react";
+import { Briefcase, Target, Users, ArrowRight, ShieldCheck } from "lucide-react";
+import { FaLinkedin as Linkedin } from "react-icons/fa";
 
 export default function LinkedInB2BPage() {
   return (

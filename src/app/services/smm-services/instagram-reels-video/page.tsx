@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Instagram, Video, Zap, TrendingUp, Play, ArrowRight } from "lucide-react";
+import { Video, Zap, TrendingUp, Play, ArrowRight } from "lucide-react";
 
 export default function InstagramReelsPage() {
   return (

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Facebook, Target, BarChart3, Zap, ArrowRight, ShieldCheck } from "lucide-react";
+import { Target, BarChart3, Zap, ArrowRight, ShieldCheck } from "lucide-react";
 
 export default function MetaAdvertisingPage() {
   return (

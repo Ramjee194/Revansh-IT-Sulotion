@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Youtube, Play, TrendingUp, Search, ArrowRight, Zap } from "lucide-react";
+import { Play, TrendingUp, Search, ArrowRight, Zap } from "lucide-react";
+import { FaYoutube as Youtube } from "react-icons/fa";
 
 export default function YouTubeMarketingPage() {
   return (
