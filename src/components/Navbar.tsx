@@ -217,7 +217,7 @@ export default function Navbar() {
                           <Link
                             key={sIdx}
                             href={service.href.startsWith("/") 
-                              ? `${service.href}/${sub.name.toLowerCase().replace(/[&()]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}` 
+                              ? `${service.href}/${sub.name.toLowerCase().replace(/[&()/]/g, '-').replace(/\s+/g, '-').replace(/-+/g, '-')}` 
                               : `${service.href}-${sub.name.toLowerCase().replace(/\s+/g, '-')}`}
                             className="text-[12px] font-bold text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 flex items-center justify-between group/sub transition-all px-3 py-2.5 rounded-xl"
                           >
@@ -376,7 +376,7 @@ export default function Navbar() {
                             {service.subServices.map((sub, sIdx) => (
                               <Link
                                 key={sIdx}
-                                href={`${service.href}/${sub.name.toLowerCase().replace(/[&()]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}
+                                href={`${service.href}/${sub.name.toLowerCase().replace(/[&()/]/g, '-').replace(/\s+/g, '-').replace(/-+/g, '-')}`}
                                 onClick={() => setIsOpen(false)}
                                 className="flex items-center justify-between pr-4 py-1"
                               >
