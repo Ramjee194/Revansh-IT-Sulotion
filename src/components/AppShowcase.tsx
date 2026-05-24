@@ -21,7 +21,7 @@ export default function AppShowcase() {
   }, []);
 
   return (
-    <section className="py-32 bg-indigo-600 dark:bg-indigo-900 relative overflow-hidden">
+    <section className="py-32 bg-black relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
@@ -36,19 +36,16 @@ export default function AppShowcase() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-8"
             >
-              <ShieldCheck size={14} className="text-blue-200" />
-              <span className="text-[10px] font-black uppercase tracking-[0.2em]">Enterprise SMS Ecosystem</span>
             </motion.div>
 
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-xl md:text-4xl font-black mb-8 leading-[0.9] tracking-tight uppercase"
+              className="flex gap-1 text-xl md:text-3xl font-black mb-8   uppercase"
             >
-              Manage Your <br />
-              <span className="italic text-blue-200 underline decoration-4 underline-offset-8">Campaigns</span> On The Go
+              Manage Your  {""}<br />
+              <span className=" text-amber-500 ">Campaigns</span> 
             </motion.h2>
 
             <motion.p

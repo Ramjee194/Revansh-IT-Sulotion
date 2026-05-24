@@ -55,11 +55,11 @@ export default function Stats() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center relative"
               >
-                <div className="text-4xl md:text-6xl font-black mb-4 tracking-tighter flex items-center justify-center">
+                <div className="text-4xl md:text-6xl font-black mb-4  flex items-center justify-center">
                   <span className="stat-counter">{stat.value}</span>
                   <span className="text-blue-500 ml-1">{stat.suffix}</span>
                 </div>
-                <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-white transition-colors">
+                <div className="text-[10px] md:text-xs font-black uppercase  text-slate-400 group-hover:text-white transition-colors">
                   {stat.label}
                 </div>
                 

@@ -57,7 +57,7 @@ export default function Projects() {
               <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">Our Portfolio</span>
             </motion.div>
             <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-               <span className="text-blue-600">Case Study</span>
+               <span className="text-orange-600">Case Study</span>
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 font-medium max-w-xl">
               Real-world digital transformation results delivered for global enterprises across various industries.

@@ -89,41 +89,50 @@ export default function Services() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
-          <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-3 mb-6"
-            >
-              <div className="w-10 h-[2px] bg-primary" />
-              <p className="text-primary font-black uppercase tracking-[0.3em] text-xs">
-                Our Capabilities
-              </p>
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-xl md:text-4xl font-display font-black tracking-tight uppercase leading-[0.9]"
-            >
-              Solutions for <br />
-              <span className="text-primary italic">Digital Excellence</span>
-            </motion.h2>
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="lg:max-w-md"
-          >
-            <p className="text-muted-foreground font-medium text-lg leading-relaxed border-l-4 border-primary/20 pl-6">
-              Revansh Tech provides end-to-end IT services designed to scale your business with precision and technical mastery.
-            </p>
-          </motion.div>
-        </div>
+        <div className="flex justify-center mb-20 px-4">
+  <div className="max-w-4xl text-center flex flex-col items-center gap-6">
+    
+    {/* Label */}
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="flex items-center gap-3"
+    >
+      <div className="w-10 h-[2px] bg-primary" />
+      
+     
+
+      <div className="w-10 h-[2px] bg-primary" />
+    </motion.div>
+
+    {/* Heading */}
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-xl md:text-4xl font-bold uppercase tracking-wider leading-tight"
+    >
+    Our{" "}
+      <span className="text-primary ">
+        Services
+      </span>
+    </motion.h2>
+
+    {/* Description */}
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.2 }}
+      className="text-muted-foreground text-base md:text-lg max-w-2xl leading-relaxed"
+    >
+      Revansh Tech provides end-to-end IT services designed to scale
+      your business with precision and modern technology.
+    </motion.p>
+
+  </div>
+</div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

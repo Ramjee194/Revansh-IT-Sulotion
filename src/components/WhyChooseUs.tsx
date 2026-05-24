@@ -55,10 +55,10 @@ export default function WhyChooseUs() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xl md:text-4xl font-black leading-tight uppercase tracking-tight max-w-3xl"
+            className="text-xl md:text-4xl font-black leading-tight  tracking-tight max-w-3xl"
           >
             
-            <span className="text-indigo-600 italic underline decoration-indigo-500/30 underline-offset-8">Revansh Growth.</span>
+            <span className="text-amber-700  underline decoration-indigo-500/30 underline-offset-8">Revansh Growth.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

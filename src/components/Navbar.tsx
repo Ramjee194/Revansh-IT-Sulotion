@@ -245,7 +245,7 @@ export default function Navbar() {
 
             <Link href="#contact" className="px-3 py-2 text-[13px] font-black transition-colors uppercase tracking-wider whitespace-nowrap text-slate-900 hover:text-blue-600">Contact</Link>
 
-            <Link href="#contact" className="ml-6 group relative inline-flex items-center justify-center px-5 py-2.5 font-black text-white transition-all duration-300 bg-blue-600 rounded-full hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-500/30 active:scale-95 overflow-hidden whitespace-nowrap">
+            <Link href="#contact" className="ml-6 group relative inline-flex items-center justify-center px-5 py-2.5 font-black text-white transition-all duration-300 bg-[#de952a] rounded-full hover:bg-[#c98322] hover:shadow-xl hover:shadow-[#de952a]/30 active:scale-95 overflow-hidden whitespace-nowrap">
               <span className="relative z-10 flex items-center text-[12px] uppercase tracking-widest">
                 Get Started
                 <FaArrowRight size={12} className="ml-2 group-hover:translate-x-1 transition-transform" />

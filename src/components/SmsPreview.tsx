@@ -26,7 +26,7 @@ export default function SmsPreview() {
             <span className="text-[10px] font-black uppercase tracking-widest text-blue-600">Real-Time Feature</span>
           </motion.div>
           <h2 className="text-xl md:text-3xl font-black mb-6 text-slate-900 dark:text-white uppercase tracking-tight">
-            Live SMS <span className="text-blue-600">Simulator</span>
+            Live SMS <span className="text-amber-700">Simulator</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl font-medium">
             Test your campaign messaging with our realistic preview tool. 
@@ -61,7 +61,7 @@ export default function SmsPreview() {
             <button
               onClick={handleSend}
               disabled={isSent}
-              className="w-full py-5 rounded-2xl bg-blue-600 text-white font-black text-lg shadow-xl shadow-blue-500/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3"
+              className="w-full py-5 rounded-2xl bg-amber-700 text-white font-black text-lg shadow-xl shadow-blue-500/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3"
             >
               {isSent ? (
                 <>

@@ -91,7 +91,7 @@ export default function Contact() {
                   href="https://calendly.com/devansh-tech" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center space-x-2 bg-[#006BFF] hover:bg-[#0052CC] text-white py-4 rounded-2xl font-black transition-all shadow-xl shadow-blue-500/20 active:scale-95"
+                  className="w-full flex items-center justify-center space-x-2 bg-[#de952a] hover:bg-[#c98322] text-white py-4 rounded-2xl font-black transition-all shadow-xl shadow-blue-500/20 active:scale-95"
                 >
                   <Calendar size={20} />
                   <span>Book on Calendly</span>
@@ -129,7 +129,7 @@ export default function Contact() {
                       required
                       type="text"
                       placeholder="John Doe"
-                      className="w-full px-4 py-3 rounded-xl bg-muted border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+                      className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
                     />
                   </div>
                   <div className="space-y-2">
@@ -139,7 +139,7 @@ export default function Contact() {
                       required
                       type="email"
                       placeholder="john@company.com"
-                      className="w-full px-4 py-3 rounded-xl bg-muted border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+                      className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
                     />
                   </div>
                 </div>
@@ -150,7 +150,7 @@ export default function Contact() {
                     required
                     type="text"
                     placeholder="Project Inquiry"
-                    className="w-full px-4 py-3 rounded-xl bg-muted border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
                   />
                 </div>
                 <div className="space-y-2">
@@ -160,12 +160,12 @@ export default function Contact() {
                     required
                     rows={5}
                     placeholder="Tell us about your project..."
-                    className="w-full px-4 py-3 rounded-xl bg-muted border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none"
                   ></textarea>
                 </div>
                 <button
                   disabled={formState === "submitting"}
-                  className="w-full btn-premium py-4 space-x-2 text-lg disabled:opacity-50"
+                  className="w-full btn-premium py-4 bg-[#de952a] hover:bg-[#c98322] space-x-2 text-lg disabled:opacity-50"
                 >
                   <span>{formState === "submitting" ? "Sending..." : "Send Message"}</span>
                   <Send size={18} />

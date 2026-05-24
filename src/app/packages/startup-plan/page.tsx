@@ -31,7 +31,7 @@ export default function StartupPlanPage() {
           </h1>
 
           <p className="text-gray-400 text-lg md:text-2xl max-w-3xl mx-auto mb-16 leading-relaxed">
-            Everything you need to launch and scale your digital presence. 
+            Everything you need to launch and scale your digital presence.
             High-performance web design and essential marketing tools bundled for success.
           </p>
 
@@ -39,7 +39,7 @@ export default function StartupPlanPage() {
             <div className="absolute -top-6 left-1/2 -translate-x-1/2 px-6 py-2 bg-blue-600 rounded-full text-xs font-black uppercase tracking-widest">
               Starting at $499
             </div>
-            
+
             <ul className="space-y-6 text-left mb-12">
               {[
                 "Modern Responsive Website",
