@@ -14,6 +14,7 @@ import Footer from "@/components/Footer";
 import BrandPartners from "@/components/BrandPartners";
 import AppShowcase from "@/components/AppShowcase";
 import SmsPreview from "@/components/SmsPreview";
+import FloatingAiWidget from "@/components/FloatingAiWidget";
 
 export default function Home() {
   return (
@@ -101,6 +102,7 @@ export default function Home() {
       <Testimonials />
       <Contact />
       <Footer />
+      <FloatingAiWidget />
     </main>
   );
 }

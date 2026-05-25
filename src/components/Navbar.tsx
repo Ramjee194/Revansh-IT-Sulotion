@@ -166,7 +166,7 @@ export default function Navbar() {
       >
         <div className="max-w-[1400px] w-full mx-auto px-4 md:px-6 flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0 group mr-12">
+          <Link href="/" className="flex items-center shrink-0 group mr-4 xl:mr-8">
             <Image
               src="/logo2.png"
               alt="Logo"
@@ -178,9 +178,12 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1 flex-nowrap">
-            <Link href="/" className="px-3 py-2 text-[13px] font-black transition-colors uppercase tracking-wider whitespace-nowrap text-slate-900 hover:text-blue-600">Home</Link>
-            <Link href="#about" className="px-3 py-2 text-[13px] font-black transition-colors uppercase tracking-wider whitespace-nowrap text-slate-900 hover:text-blue-600">About Us</Link>
+          <div className="hidden xl:flex items-center space-x-1 flex-nowrap">
+            <Link href="/" className="px-1.5 xl:px-2.5 2xl:px-3 py-2 text-[11px] xl:text-[12px] 2xl:text-[13px] font-black transition-colors uppercase tracking-wider whitespace-nowrap text-slate-900 hover:text-blue-600">Home</Link>
+            <Link href="#about" className="px-1.5 xl:px-2.5 2xl:px-3 py-2 text-[11px] xl:text-[12px] 2xl:text-[13px] font-black transition-colors uppercase tracking-wider whitespace-nowrap text-slate-900 hover:text-blue-600">About Us</Link>
+            <Link href="/ai-hub" className="px-1.5 xl:px-2.5 2xl:px-3 py-2 text-[11px] xl:text-[12px] 2xl:text-[13px] font-black transition-colors uppercase tracking-wider whitespace-nowrap text-slate-900 hover:text-indigo-600 flex items-center gap-1 group">
+              AI Solutions
+            </Link>
 
             {servicesData.map((service, idx) => (
               <div
@@ -189,8 +192,8 @@ export default function Navbar() {
                 onMouseEnter={() => setActiveDropdown(service.name)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className={`flex items-center px-3 py-2 text-[13px] font-black transition-colors cursor-pointer uppercase tracking-wider whitespace-nowrap ${activeDropdown === service.name ? "text-blue-600" : "text-slate-900 hover:text-blue-600"}`}>
-                  {service.name} <ChevronDown size={14} className={`ml-1 transition-transform duration-300 ${activeDropdown === service.name ? "rotate-180" : ""}`} />
+                <button className={`flex items-center px-1.5 xl:px-2.5 2xl:px-3 py-2 text-[11px] xl:text-[12px] 2xl:text-[13px] font-black transition-colors cursor-pointer uppercase tracking-wider whitespace-nowrap ${activeDropdown === service.name ? "text-blue-600" : "text-slate-900 hover:text-blue-600"}`}>
+                  {service.name} <ChevronDown size={13} className={`ml-0.5 xl:ml-1 transition-transform duration-300 ${activeDropdown === service.name ? "rotate-180" : ""}`} />
                 </button>
 
                 <AnimatePresence>
@@ -243,16 +246,16 @@ export default function Navbar() {
               </div>
             ))}
 
-            <Link href="#contact" className="px-3 py-2 text-[13px] font-black transition-colors uppercase tracking-wider whitespace-nowrap text-slate-900 hover:text-blue-600">Contact</Link>
+            <Link href="#contact" className="px-1.5 xl:px-2.5 2xl:px-3 py-2 text-[11px] xl:text-[12px] 2xl:text-[13px] font-black transition-colors uppercase tracking-wider whitespace-nowrap text-slate-900 hover:text-blue-600">Contact</Link>
 
-            <Link href="#contact" className="ml-6 group relative inline-flex items-center justify-center px-5 py-2.5 font-black text-white transition-all duration-300 bg-[#de952a] rounded-full hover:bg-[#c98322] hover:shadow-xl hover:shadow-[#de952a]/30 active:scale-95 overflow-hidden whitespace-nowrap">
-              <span className="relative z-10 flex items-center text-[12px] uppercase tracking-widest">
+            <Link href="#contact" className="ml-2 xl:ml-4 2xl:ml-6 group relative inline-flex items-center justify-center px-3.5 py-2 xl:px-5 xl:py-2.5 font-black text-white transition-all duration-300 bg-[#de952a] rounded-full hover:bg-[#c98322] hover:shadow-xl hover:shadow-[#de952a]/30 active:scale-95 overflow-hidden whitespace-nowrap">
+              <span className="relative z-10 flex items-center text-[10px] xl:text-[11px] 2xl:text-[12px] uppercase tracking-wider xl:tracking-widest">
                 Get Started
-                <FaArrowRight size={12} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                <FaArrowRight size={10} className="ml-1.5 xl:ml-2 group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
 
-            <div className="ml-4 flex items-center">
+            <div className="ml-2 xl:ml-4 flex items-center">
               <button
                 onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
                 className="p-2.5 rounded-full transition-colors hover:bg-slate-100 text-slate-900"
@@ -263,7 +266,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Actions */}
-          <div className="lg:hidden flex items-center space-x-3">
+          <div className="xl:hidden flex items-center space-x-3">
             <button
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
               className="p-2 rounded-full bg-slate-100 text-slate-900"
@@ -286,7 +289,7 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm lg:hidden flex justify-end"
+              className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm xl:hidden flex justify-end"
               onClick={() => setIsOpen(false)}
             >
               <motion.div
@@ -348,6 +351,15 @@ export default function Navbar() {
                       <FaInfoCircle size={14} />
                     </div>
                     <span className="font-black text-sm uppercase tracking-wider">About Us</span>
+                  </Link>
+
+                  <Link href="/ai-hub" onClick={() => setIsOpen(false)} className="flex items-center space-x-4 p-4 rounded-xl hover:bg-muted transition-colors group">
+                    <div className="w-8 h-8 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-500 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                      <FaCommentDots size={14} />
+                    </div>
+                    <span className="font-black text-sm uppercase tracking-wider flex items-center gap-2">
+                      AI Solutions
+                    </span>
                   </Link>
 
                   {servicesData.map((service, idx) => (
