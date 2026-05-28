@@ -132,8 +132,8 @@ const MOCK_CONSULTANT_RESPONSES = {
 * **Phase 3: Core Development (4-5 weeks):** Database setup, authentication, product catalogue rendering, cart functionality, and Stripe checkout.
 * **Phase 4: Launch & Quality Assurance (1 week):** Perform load testing, secure payment pathways, and SEO audit.
 
-**Revansh Tech Advantage:**
-Revansh Tech can build your E-Commerce application with built-in Bulk SMS and WhatsApp messaging, sending real-time automated updates for delivery, OTP verification, and marketing notifications!`,
+**Orbous Advantage:**
+Orbous can build your E-Commerce application with built-in Bulk SMS and WhatsApp messaging, sending real-time automated updates for delivery, OTP verification, and marketing notifications!`,
   saas: `### Enterprise SaaS Application Architecture
 **Suggested Tech Stack:**
 * **Frontend:** Next.js (App Router) + Tailwind CSS + Framer Motion (animated dashboard UI).
@@ -148,7 +148,7 @@ Revansh Tech can build your E-Commerce application with built-in Bulk SMS and Wh
 * **Phase 3: Dashboard & Team Collaborations (3 weeks):** Live updates, team member invitation system, roles/permissions (RBAC), and analytics graphs.
 * **Phase 4: Launch & SEO Optimizations (2 weeks):** Complete penetration testing, rate-limiting configuration, and optimization of marketing landing page.
 
-**Revansh Tech Advantage:**
+**Orbous Advantage:**
 Our A+ Engineering Standard ensures your SaaS is highly scalable, containerized using Docker, and features clean code with rigid unit tests.`,
   mobile: `### High-Performance Cross-Platform Mobile App
 **Suggested Tech Stack:**
@@ -163,18 +163,18 @@ Our A+ Engineering Standard ensures your SaaS is highly scalable, containerized 
 * **Phase 3: API Integration & Backend Logic (4 weeks):** User Auth (social login), database interactions, push notification servers, and image uploads.
 * **Phase 4: App Store & Play Store Submissions (2 weeks):** Bundling applications, beta testing via TestFlight / Google Play Console, and store listings.
 
-**Revansh Tech Advantage:**
+**Orbous Advantage:**
 We have experienced mobile app engineers who build sleek, native-speed layouts and handle the entire app store submission process for you.`
 };
 
 const MOCK_SUPPORT_RESPONSES = [
   {
     keywords: ["service", "what do you do", "offer", "capabilities", "features"],
-    answer: "Revansh Tech is a premium IT & Software Solutions agency offering:\n1. **Web Services**: Premium Web Design, Custom Web Apps, E-Commerce Solutions, Mobile App Development, AI Web Solutions, and Cloud Care.\n2. **SMS Services**: Bulk SMS (Promotional & Transactional), Voice Calls & IVR, and WhatsApp Business API integration.\n3. **SEO & SMM Services**: Local SEO, technical auditing, Meta/Google ads management, and YouTube marketing."
+    answer: "Orbous is a premium IT & Software Solutions agency offering:\n1. **Web Services**: Premium Web Design, Custom Web Apps, E-Commerce Solutions, Mobile App Development, AI Web Solutions, and Cloud Care.\n2. **SMS Services**: Bulk SMS (Promotional & Transactional), Voice Calls & IVR, and WhatsApp Business API integration.\n3. **SEO & SMM Services**: Local SEO, technical auditing, Meta/Google ads management, and YouTube marketing."
   },
   {
     keywords: ["contact", "email", "phone", "address", "reach", "hire", "talk"],
-    answer: "You can reach Revansh Tech in multiple ways:\n* **Email**: ramjeekumaryadav733@gmail.com\n* **Contact Form**: Scroll down on our website to fill out our contact form.\n* **Office**: Reach out directly via our contact channels to arrange a face-to-face or video consultation. We'd love to discuss how to build your custom tech solution!"
+    answer: "You can reach Orbous in multiple ways:\n* **Email**: ramjeekumaryadav733@gmail.com\n* **Contact Form**: Scroll down on our website to fill out our contact form.\n* **Office**: Reach out directly via our contact channels to arrange a face-to-face or video consultation. We'd love to discuss how to build your custom tech solution!"
   },
   {
     keywords: ["tech", "technology", "stack", "react", "next", "mongodb", "node"],
@@ -182,13 +182,18 @@ const MOCK_SUPPORT_RESPONSES = [
   },
   {
     keywords: ["why", "excellence", "standard", "choose"],
-    answer: "Clients choose Revansh Tech because:\n* We follow **A+ Engineering Standards** (clean code, modular layout, high security).\n* We provide custom-tailored solutions rather than cookie-cutter templates.\n* We have a proven track record (1+ years of delivery, 5-star testimonials).\n* We offer full-stack support: from web development to Bulk SMS marketing and SEO optimization."
+    answer: "Clients choose Orbous because:\n* We follow **A+ Engineering Standards** (clean code, modular layout, high security).\n* We provide custom-tailored solutions rather than cookie-cutter templates.\n* We have a proven track record (1+ years of delivery, 5-star testimonials).\n* We offer full-stack support: from web development to Bulk SMS marketing and SEO optimization."
   }
 ];
 
 export async function POST(req: Request) {
+  let mode = "support";
+  let prompt = "";
   try {
-    const { mode, prompt, history } = await req.json();
+    const body = await req.json();
+    mode = body.mode || "support";
+    prompt = body.prompt || "";
+    const history = body.history;
 
     if (!mode || !prompt) {
       return NextResponse.json({ error: "Missing mode or prompt" }, { status: 400 });
@@ -205,7 +210,7 @@ export async function POST(req: Request) {
     // ONLINE MODE - INTEGRATING GOOGLE GEMINI API (v1beta/gemini-2.5-flash)
     let systemPrompt = "";
     if (mode === "support") {
-      systemPrompt = `You are the official AI Support Agent for "Revansh IT & Software Solutions" (also known as Revansh Tech).
+      systemPrompt = `You are the official AI Support Agent for "Orbous IT & Software Solutions" (also known as Orbous).
 Your task is to answer inquiries about our services, technologies, values, and contact details.
 Our details:
 - **Services**: Web Development (Custom Web Apps, E-Commerce, React/Next.js apps), Mobile Apps (React Native, Flutter), Bulk SMS, WhatsApp Business API integrations, Voice calls/IVR, SEO optimization, and Social Media Marketing (Meta, IG, FB ads).
@@ -213,13 +218,13 @@ Our details:
 - **Contact**: Email is ramjeekumaryadav733@gmail.com. We can build anything. Suggest client to fill the contact form or send a message.
 Be professional, friendly, and structure answers with clear bullet points. Keep responses relatively concise.`;
     } else if (mode === "consultant") {
-      systemPrompt = `You are a Senior Tech Consultant and Software Architect at Revansh Tech.
+      systemPrompt = `You are a Senior Tech Consultant and Software Architect at Orbous.
 Analyze the user's project idea, product description, or technical issue.
 Provide a highly detailed, professional consulting output containing:
 1. **Suggested Tech Stack** (Frontend, Backend, Database, Cloud & Deployment) with reasons why.
 2. **Phase-by-Phase Development Timeline** (e.g. scoping, UI/UX, core coding, testing, release).
 3. **Rough Price/Complexity Estimate** (explain factors like integrations, database complexity).
-4. **How Revansh Tech can execute this** (integrating SMS APIs, Next.js framework, scaling cloud infrastructure).
+4. **How Orbous can execute this** (integrating SMS APIs, Next.js framework, scaling cloud infrastructure).
 Use beautiful, structured markdown formatting.`;
     } else if (mode === "roadmap") {
       systemPrompt = `You are an expert technical educator and curriculum developer.
@@ -313,8 +318,8 @@ Please output exactly 4-6 sequential steps. Be detailed in descriptions and prov
     console.error("AI API Critical Error:", error);
     // On server error, fallback to offline demo instead of crashing
     return handleOfflineMode(
-      req.headers.get("mode") || "support",
-      "error_fallback"
+      mode,
+      prompt || "error_fallback"
     );
   }
 }
@@ -336,7 +341,7 @@ function handleOfflineMode(mode: string, prompt: string) {
     // Default Support Answer
     return NextResponse.json({
       offline: true,
-      text: `[Offline Demo Mode]\n\nHello! I am the Revansh Tech AI Support Bot. 
+      text: `[Offline Demo Mode]\n\nHello! I am the Orbous AI Support Bot. 
 I can tell you about our **services**, our **technologies**, why you should **choose** us, or how to **contact** us.
 (Try asking: 'What services do you offer?', 'What technologies do you use?', or 'How can I contact you?')`
     });
@@ -370,7 +375,7 @@ Thank you for your project query: *"__${prompt}__"*.
 * **MVP Core Development:** 3-5 Weeks
 * **Testing & Deployment:** 1 Week
 
-**Revansh Tech Execution:**
+**Orbous Execution:**
 We specialize in building responsive, high-performance web and mobile software solutions. Let's arrange a consultation! Please scroll down to our contact form or contact us at **ramjeekumaryadav733@gmail.com** to schedule a detailed session.`
     });
   }

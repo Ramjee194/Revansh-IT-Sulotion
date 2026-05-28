@@ -64,7 +64,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold">Email Us</h4>
-                  <p className="text-muted-foreground">contact@revansh.com</p>
+                  <p className="text-muted-foreground">contact@orbous.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -79,7 +79,7 @@ export default function Contact() {
 
               <div className="pt-8 space-y-4">
                 <a 
-                  href="https://wa.me/918404827541?text=Hello%20Revansh%20Tech!%20I'm%20interested%20in%20your%20services."
+                  href="https://wa.me/918404827541?text=Hello%20Orbous!%20I'm%20interested%20in%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center space-x-2 bg-[#25D366] hover:bg-[#128C7E] text-white py-4 rounded-2xl font-black transition-all shadow-xl shadow-green-500/20 active:scale-95"
@@ -88,7 +88,7 @@ export default function Contact() {
                   <span>Chat on WhatsApp</span>
                 </a>
                 <a 
-                  href="https://calendly.com/devansh-tech" 
+                  href="https://calendly.com/orbous-tech" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center space-x-2 bg-[#de952a] hover:bg-[#c98322] text-white py-4 rounded-2xl font-black transition-all shadow-xl shadow-blue-500/20 active:scale-95"

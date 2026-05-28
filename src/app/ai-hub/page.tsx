@@ -49,7 +49,7 @@ export default function AiHubPage() {
   const [chatMessages, setChatMessages] = useState<Message[]>([
     {
       sender: "ai",
-      text: "Hello! I am your Revansh Tech AI Support Bot. How can I help you build, market, or scale your software ideas today?"
+      text: "Hello! I am your Orbous AI Support Bot. How can I help you build, market, or scale your software ideas today?"
     }
   ]);
   const chatEndRef = useRef<HTMLDivElement>(null);
@@ -166,7 +166,7 @@ export default function AiHubPage() {
   };
 
   const quickQuestions = [
-    "What services does Revansh Tech offer?",
+    "What services does Orbous offer?",
     "What is your tech stack?",
     "How do I request a custom web app?",
     "What is your Engineering Standard?"
@@ -191,7 +191,7 @@ export default function AiHubPage() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/20 bg-indigo-500/5 text-indigo-300 text-xs font-semibold tracking-wider uppercase"
           >
             <Sparkles size={14} className="text-indigo-400 animate-spin" style={{ animationDuration: '3s' }} />
-            Revansh AI Solutions Hub
+            Orbous AI Solutions Hub
           </motion.div>
 
           <motion.h1
@@ -279,7 +279,7 @@ export default function AiHubPage() {
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 rounded-full bg-green-500 animate-ping" />
                     <div>
-                      <h4 className="font-bold text-sm">Revansh AI Support Agent</h4>
+                      <h4 className="font-bold text-sm">Orbous AI Support Agent</h4>
                       <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Online and responsive</p>
                     </div>
                   </div>
@@ -412,7 +412,7 @@ export default function AiHubPage() {
                         href="#contact" 
                         className="px-5 py-2.5 rounded-full bg-amber-500 hover:bg-amber-600 transition-colors text-black font-black text-xs uppercase tracking-wider"
                       >
-                        Hire Revansh Engineers
+                        Hire Orbous Engineers
                       </a>
                     </div>
                   </motion.div>

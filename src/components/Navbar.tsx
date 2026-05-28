@@ -165,16 +165,23 @@ export default function Navbar() {
         className={`relative flex items-center justify-center transition-all duration-500 pointer-events-auto bg-white shadow-lg border-b border-slate-200`}
       >
         <div className="max-w-[1400px] w-full mx-auto px-4 md:px-6 flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0 group mr-4 xl:mr-8">
+          <Link href="/" className="flex items-center shrink-0 group mr-4 xl:mr-8 gap-2.5">
             <Image
-              src="/logo2.png"
+              src="/logo2.svg"
               alt="Logo"
-              width={180}
-              height={50}
-              className="h-12  w-auto object-contain"
+              width={120}
+              height={120}
+              className="h-9 w-auto object-contain"
               priority
             />
+            <div className="flex flex-col text-left justify-center">
+              <span className="font-extrabold text-xl tracking-wider text-slate-900 dark:text-white font-display leading-none">
+                ORBOUS
+              </span>
+              <span className="text-[8px] font-black tracking-widest text-slate-500 dark:text-slate-400 uppercase mt-1">
+                IT &amp; SOFTWARE SOLUTIONS
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -219,8 +226,8 @@ export default function Navbar() {
                         {service.subServices.map((sub, sIdx) => (
                           <Link
                             key={sIdx}
-                            href={service.href.startsWith("/") 
-                              ? `${service.href}/${sub.name.toLowerCase().replace(/[&()/]/g, '-').replace(/\s+/g, '-').replace(/-+/g, '-')}` 
+                            href={service.href.startsWith("/")
+                              ? `${service.href}/${sub.name.toLowerCase().replace(/[&()/]/g, '-').replace(/\s+/g, '-').replace(/-+/g, '-')}`
                               : `${service.href}-${sub.name.toLowerCase().replace(/\s+/g, '-')}`}
                             className="text-[12px] font-bold text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 flex items-center justify-between group/sub transition-all px-3 py-2.5 rounded-xl"
                           >
@@ -302,15 +309,23 @@ export default function Navbar() {
               >
                 {/* Mobile Menu Header */}
                 <div className="p-4 bg-slate-900 text-white flex justify-between items-center">
-                  <div className="flex items-center">
+                  <div className="flex items-center gap-3">
                     <Image
-                      src="/logo1.png"
+                      src="/logo2.svg"
                       alt="Logo"
-                      width={140}
-                      height={40}
-                      className="h-10 w-auto object-contain brightness-0 invert"
+                      width={120}
+                      height={120}
+                      className="h-8 w-auto object-contain"
                       priority
                     />
+                    <div className="flex flex-col text-left justify-center">
+                      <span className="font-extrabold text-base tracking-wider text-white font-display leading-none">
+                        ORBOUS
+                      </span>
+                      <span className="text-[7px] font-black tracking-widest text-slate-400 uppercase mt-0.5">
+                        IT &amp; SOFTWARE SOLUTIONS
+                      </span>
+                    </div>
                   </div>
                   <button onClick={() => setIsOpen(false)} className="p-2 bg-white/10 rounded hover:bg-white/20">
                     <X size={20} />

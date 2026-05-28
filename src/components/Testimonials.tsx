@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: "Sanya Kapoor",
     role: "Marketing Head, FabIndia Digital",
-    content: "Our website's performance and SEO reach have never been better. Devansh IT really knows how to build for scale.",
+    content: "Our website's performance and SEO reach have never been better. Orbous really knows how to build for scale.",
     rating: 5,
     image: "/indian_marketing_sanya_1778923535959.png"
   },
@@ -30,7 +30,7 @@ const testimonials = [
   {
     name: "Priya Sharma",
     role: "COO, FinTech Solutions",
-    content: "We migrated our legacy core infrastructure to the cloud with Devansh IT. Zero downtime and 3x performance improvement.",
+    content: "We migrated our legacy core infrastructure to the cloud with Orbous. Zero downtime and 3x performance improvement.",
     rating: 5,
     bgGradient: "from-blue-500 to-indigo-500",
     initials: "PS"
@@ -62,7 +62,7 @@ const testimonials = [
   {
     name: "Karan Johar",
     role: "Marketing Director, Stellar Media",
-    content: "Devansh IT's SMM and Meta advertising strategies gave us a 5x return on ad spend. Their team is creative and highly analytical.",
+    content: "Orbous's SMM and Meta advertising strategies gave us a 5x return on ad spend. Their team is creative and highly analytical.",
     rating: 5,
     bgGradient: "from-purple-500 to-indigo-500",
     initials: "KJ"

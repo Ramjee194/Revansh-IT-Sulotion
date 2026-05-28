@@ -17,7 +17,7 @@ export default function FloatingAiWidget() {
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: "ai",
-      text: "Hi! Ask me anything about Revansh Tech. I can help estimate your project stack or roadmap!"
+      text: "Hi! Ask me anything about Orbous. I can help estimate your project stack or roadmap!"
     }
   ]);
   const chatEndRef = useRef<HTMLDivElement>(null);
@@ -82,7 +82,7 @@ export default function FloatingAiWidget() {
                   <Sparkles size={16} />
                 </div>
                 <div>
-                  <h4 className="font-extrabold text-sm tracking-wide">Revansh Tech Assistant</h4>
+                  <h4 className="font-extrabold text-sm tracking-wide">Orbous AI Assistant</h4>
                   <p className="text-[9px] text-indigo-200 font-bold uppercase tracking-wider">Powered by AI</p>
                 </div>
               </div>

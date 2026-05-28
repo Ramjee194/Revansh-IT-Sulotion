@@ -14,7 +14,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Devansh IT & Software Solutions | Engineering Intelligent Digital Experiences",
+  title: "Orbous IT & Software Solutions | Engineering Intelligent Digital Experiences",
   description: "Enterprise software development, AI solutions, and digital transformation for global businesses.",
 };
 

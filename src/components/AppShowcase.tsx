@@ -42,7 +42,7 @@ export default function AppShowcase() {
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="flex gap-1 text-xl md:text-3xl font-black mb-8   uppercase"
+              className="flex gap-1 text-xl md:text-3xl font-black mb-8   "
             >
               Manage Your  {""}<br />
               <span className=" text-amber-500 ">Campaigns</span> 

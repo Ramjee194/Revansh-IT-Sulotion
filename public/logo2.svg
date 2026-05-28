@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 25 96 68" width="100%" height="100%">
+  <defs>
+    <!-- Corporate Blue Gradient -->
+    <linearGradient id="blue-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <!-- Amber/Gold Gradient -->
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#de952a" />
+      <stop offset="100%" stop-color="#c98322" />
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;display=swap');
+      .logo-o {
+        font-family: 'Bodoni Moda', 'Playfair Display', 'Georgia', serif;
+        font-size: 68px;
+        font-weight: 800;
+        fill: url(#blue-grad);
+      }
+      .logo-r {
+        font-family: 'Bodoni Moda', 'Playfair Display', 'Georgia', serif;
+        font-size: 68px;
+        font-weight: 800;
+        fill: url(#gold-grad);
+      }
+    </style>
+  </defs>
+  
+  <!-- Monogram OR -->
+  <g>
+    <!-- Letter O -->
+    <text x="18" y="85" class="logo-o">O</text>
+    <!-- Letter R -->
+    <text x="52" y="85" class="logo-r">R</text>
+  </g>
+</svg>

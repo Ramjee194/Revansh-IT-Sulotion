@@ -65,7 +65,7 @@ export async function POST(req: Request) {
               <p style="white-space: pre-wrap; color: #334155;">${message}</p>
             </div>
             <footer style="margin-top: 30px; font-size: 12px; color: #64748b; text-align: center;">
-              Sent from Revansh IT & Software Solutions Website
+              Sent from Orbous IT & Software Solutions Website
             </footer>
           </div>
         `,

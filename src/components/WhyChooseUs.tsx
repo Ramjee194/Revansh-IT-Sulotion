@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
             className="text-xl md:text-4xl font-black leading-tight  tracking-tight max-w-3xl"
           >
             
-            <span className="text-amber-700  underline decoration-indigo-500/30 underline-offset-8">Revansh Growth.</span>
+            <span className="text-amber-700  underline decoration-indigo-500/30 underline-offset-8">Orbous Growth.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

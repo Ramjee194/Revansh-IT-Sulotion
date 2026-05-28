@@ -11,19 +11,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           <div className="space-y-6">
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative h-12 w-auto overflow-hidden transition-transform group-hover:scale-105">
+              <div className="relative h-10 w-auto overflow-hidden transition-transform group-hover:scale-105">
                 <Image
-                  src="/logo2.png"
-                  alt="Devansh Logo"
-                  width={180}
-                  height={50}
-                  className="h-12 w-auto object-contain"
+                  src="/logo2.svg"
+                  alt="Orbous Logo"
+                  width={120}
+                  height={120}
+                  className="h-10 w-auto object-contain"
                 />
               </div>
             </Link>
             <p className="text-muted-foreground leading-relaxed">
-              Pioneering digital transformation through high-performance engineering, 
-              AI-driven insights, and enterprise-grade software solutions with Revansh Tech.
+              Pioneering digital transformation through high-performance engineering,
+              AI-driven insights, and enterprise-grade software solutions with Orbous.
             </p>
             <div className="flex space-x-4">
               {[Globe, Code, Mail].map((Icon, i) => (
@@ -66,9 +66,9 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-8">Newsletter</h4>
             <p className="text-sm text-muted-foreground mb-6">Stay updated with the latest in technology and innovation.</p>
             <form className="space-y-3">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
+              <input
+                type="email"
+                placeholder="Enter your email"
                 className="w-full px-4 py-3 rounded-xl bg-muted border border-border focus:border-primary outline-none transition-all"
               />
               <button className="w-full btn-premium py-3 rounded-xl">Subscribe Now</button>
@@ -78,7 +78,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-border flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Revansh Tech & Software Solutions. All rights reserved.
+            © {new Date().getFullYear()} Orbous Tech & Software Solutions. All rights reserved.
           </p>
           <div className="flex space-x-8 text-sm text-muted-foreground">
             <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>

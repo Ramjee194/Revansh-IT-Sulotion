@@ -28,13 +28,13 @@ export default function Home() {
 
           {/* Top Text Content */}
           <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 space-y-6">
-            <h2 className="text-xl sm:text-3xl font-display font-black  uppercase ">
+            <h2 className="text-xl sm:text-3xl font-display font-black  ">
               High Performance <br className="sm:hidden" />
               <span className="text-amber-800">Solutions.</span>
             </h2>
             <div className="w-24 h-1.5 bg-indigo-600 mx-auto rounded-full" />
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed font-medium">
-              Revansh Tech provides high-availability technical solutions.
+              Orbous provides high-availability technical solutions.
               We focus on performance, security, and scalable infrastructure
               for modern global enterprises.
             </p>

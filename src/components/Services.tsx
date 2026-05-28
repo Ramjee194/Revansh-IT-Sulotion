@@ -127,7 +127,7 @@ export default function Services() {
       transition={{ delay: 0.2 }}
       className="text-muted-foreground text-base md:text-lg max-w-2xl leading-relaxed"
     >
-      Revansh Tech provides end-to-end IT services designed to scale
+      Orbous provides end-to-end IT services designed to scale
       your business with precision and modern technology.
     </motion.p>
 
@@ -150,10 +150,10 @@ export default function Services() {
               whileHover={{ y: -10, rotateX: 5, rotateY: 5 }}
               className="group relative aspect-[4/5] rounded-[2rem] overflow-hidden cursor-pointer bg-slate-900 perspective-1000 shadow-xl"
             >
-              {/* Branding Label (Revansh Aad Karna) */}
+              {/* Branding Label (Orbous Aad Karna) */}
               <div className="absolute top-6 left-6 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[8px] font-black uppercase tracking-[0.2em] text-white">
-                  Revansh
+                  Orbous
                 </span>
               </div>
 

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Send, Smartphone, Shield, Zap, CheckCircle2, MessageSquare } from "lucide-react";
 
 export default function SmsPreview() {
-  const [message, setMessage] = useState("Hello! This is a test campaign message from Revansh Tech.");
+  const [message, setMessage] = useState("Hello! This is a test campaign message from Orbous Tech.");
   const [isSent, setIsSent] = useState(false);
 
   const handleSend = () => {
@@ -30,7 +30,7 @@ export default function SmsPreview() {
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl font-medium">
             Test your campaign messaging with our realistic preview tool. 
-            See exactly how your customers will receive your brand's voice.
+            See exactly how your customers will receive your brand&apos;s voice.
           </p>
         </div>
 
