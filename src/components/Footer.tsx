@@ -10,15 +10,21 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           <div className="space-y-6">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative h-10 w-auto overflow-hidden transition-transform group-hover:scale-105">
-                <Image
-                  src="/logo2.svg"
-                  alt="Orbous Logo"
-                  width={120}
-                  height={120}
-                  className="h-10 w-auto object-contain"
-                />
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <Image
+                src="/logo-sphere.png"
+                alt="Orbous Logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain transition-transform group-hover:scale-105"
+              />
+              <div className="flex flex-col text-left justify-center">
+                <span className="font-extrabold text-xl tracking-wider text-slate-900 dark:text-white font-display leading-none">
+                  ØRBOUS
+                </span>
+                <span className="text-[8px] font-black tracking-widest text-slate-500 dark:text-slate-400 uppercase mt-1">
+                  IT &amp; SOFTWARE SOLUTIONS
+                </span>
               </div>
             </Link>
             <p className="text-muted-foreground leading-relaxed">

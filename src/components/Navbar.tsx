@@ -167,16 +167,16 @@ export default function Navbar() {
         <div className="max-w-[1400px] w-full mx-auto px-4 md:px-6 flex justify-between items-center">
           <Link href="/" className="flex items-center shrink-0 group mr-4 xl:mr-8 gap-2.5">
             <Image
-              src="/logo2.svg"
-              alt="Logo"
-              width={120}
-              height={120}
-              className="h-9 w-auto object-contain"
+              src="/logo-sphere.png"
+              alt="Orbous Logo"
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain"
               priority
             />
             <div className="flex flex-col text-left justify-center">
               <span className="font-extrabold text-xl tracking-wider text-slate-900 dark:text-white font-display leading-none">
-                ORBOUS
+                ØRBOUS
               </span>
               <span className="text-[8px] font-black tracking-widest text-slate-500 dark:text-slate-400 uppercase mt-1">
                 IT &amp; SOFTWARE SOLUTIONS
@@ -309,20 +309,20 @@ export default function Navbar() {
               >
                 {/* Mobile Menu Header */}
                 <div className="p-4 bg-slate-900 text-white flex justify-between items-center">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2.5">
                     <Image
-                      src="/logo2.svg"
-                      alt="Logo"
-                      width={120}
-                      height={120}
-                      className="h-8 w-auto object-contain"
+                      src="/logo-sphere.png"
+                      alt="Orbous Logo"
+                      width={32}
+                      height={32}
+                      className="h-8 w-8 object-contain"
                       priority
                     />
                     <div className="flex flex-col text-left justify-center">
                       <span className="font-extrabold text-base tracking-wider text-white font-display leading-none">
-                        ORBOUS
+                        ØRBOUS
                       </span>
-                      <span className="text-[7px] font-black tracking-widest text-slate-400 uppercase mt-0.5">
+                      <span className="text-[7px] font-black tracking-widest text-slate-400 uppercase mt-1">
                         IT &amp; SOFTWARE SOLUTIONS
                       </span>
                     </div>
