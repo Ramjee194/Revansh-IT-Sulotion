@@ -29,13 +29,13 @@ export default function SmsPreview() {
             Live SMS <span className="text-amber-700">Simulator</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl font-medium">
-            Test your campaign messaging with our realistic preview tool. 
+            Test your campaign messaging with our realistic preview tool.
             See exactly how your customers will receive your brand&apos;s voice.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center bg-slate-50 dark:bg-white/5 p-12 rounded-[3rem] border border-slate-200 dark:border-white/10">
-          
+
           {/* Editor Side */}
           <div className="space-y-8">
             <div className="space-y-4">
@@ -105,7 +105,7 @@ export default function SmsPreview() {
                   <div className="flex justify-center mb-4">
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Today 9:41 AM</span>
                   </div>
-                  
+
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9, y: 10 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -132,7 +132,7 @@ export default function SmsPreview() {
                   </AnimatePresence>
                 </div>
               </div>
-              
+
               {/* Phone Notch */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-900 rounded-b-2xl z-20" />
             </div>

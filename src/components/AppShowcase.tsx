@@ -30,7 +30,7 @@ export default function AppShowcase() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
-          
+
           {/* Left Content */}
           <div className="text-white">
             <motion.div
@@ -45,7 +45,7 @@ export default function AppShowcase() {
               className="flex gap-1 text-xl md:text-3xl font-black mb-8   "
             >
               Manage Your  {""}<br />
-              <span className=" text-amber-500 ">Campaigns</span> 
+              <span className=" text-amber-500 ">Campaigns</span>
             </motion.h2>
 
             <motion.p
@@ -54,7 +54,7 @@ export default function AppShowcase() {
               transition={{ delay: 0.1 }}
               className="text-lg md:text-xl text-blue-50/80 mb-12 max-w-xl leading-relaxed font-medium"
             >
-              Experience the power of real-time monitoring. Our mobile dashboard provides 
+              Experience the power of real-time monitoring. Our mobile dashboard provides
               instant insights into delivery rates, latency, and global throughput.
             </motion.p>
 
@@ -134,10 +134,10 @@ export default function AppShowcase() {
             {/* Phone Case */}
             <div className="relative mx-auto w-[320px] h-[640px] bg-slate-950 rounded-[3rem] border-[8px] border-slate-900 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-900 rounded-b-2xl z-20" />
-              
-              <img 
-                src="/revansh_mobile_app_screen_1778923034781.png" 
-                alt="App Screenshot" 
+
+              <img
+                src="/revansh_mobile_app_screen_1778923034781.png"
+                alt="App Screenshot"
                 className="w-full h-full object-cover opacity-90 transition-opacity hover:opacity-100"
               />
             </div>
