@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const IMAGES = [
   "/premium_it_support_1.png",
   "/premium_it_support_2.png",
-  "/premium_it_support_3.png"
+  "/premium_it_support_3.png",
 ];
 
 export default function Hero() {
@@ -30,7 +30,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 1.02 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
-            transition={{ duration: 2.5, ease: "easeInOut" }} // Smooth slow-motion crossfade
+            transition={{ duration: 2.5, ease: "easeInOut" }}
             className="absolute inset-0 w-full h-full"
           >
             <img
@@ -39,35 +39,34 @@ export default function Hero() {
               className="w-full h-full object-cover"
             />
             {/* Cinematic dark overlay to make white text completely readable */}
-            <div className="absolute inset-0 bg-black/65" />
+            <div className="absolute inset-0 bg-black/70" />
           </motion.div>
         </AnimatePresence>
       </div>
 
       {/* Main Centered Content */}
       <div className="relative z-20 max-w-4xl mx-auto px-6 text-center pt-28 pb-16 flex flex-col items-center justify-center">
-
-        {/* Heading (Pure white, uppercase, no text gradients, matching reference size) */}
+        {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white uppercase leading-[1.15] max-w-3xl"
         >
-          WE SPECIALIZE IN IT SERVICE & SUPPORT
+          WE SPECIALIZE IN IT SERVICE &amp; SUPPORT
         </motion.h1>
 
-        {/* Description (Centered and clean) */}
+        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="mt-8 text-sm sm:text-base md:text-lg text-slate-100 max-w-2xl font-medium leading-relaxed opacity-95"
+          className="mt-6 text-sm sm:text-base md:text-lg text-slate-100 max-w-2xl font-normal leading-relaxed opacity-95"
         >
           We specialize in providing IT infrastructure services with the promise of reliability and resourcefulness to provide practical, cost-effective solutions to clients.
         </motion.p>
 
-        {/* Action Buttons (Stacked vertically with matching dimensions) */}
+        {/* Action Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,7 +75,7 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="w-full py-4 text-center bg-[#de952a] hover:bg-[#c98322] text-white font-bold rounded-[6px] transition-all duration-300 uppercase tracking-widest text-xs sm:text-sm shadow-md"
+            className="w-full py-4 text-center bg-[#F8E7C9] hover:bg-[#ECD3A7] text-[#064E3B] font-bold rounded-[6px] transition-all duration-300 uppercase tracking-widest text-xs sm:text-sm shadow-md"
           >
             GET STARTED
           </a>
@@ -98,7 +97,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Floating WhatsApp Widget in Bottom Left (Matching Screenshot) */}
+      {/* Floating WhatsApp Widget in Bottom Left */}
       <div className="fixed bottom-6 left-6 z-50 pointer-events-auto">
         <a
           href="https://wa.me/918404827541"

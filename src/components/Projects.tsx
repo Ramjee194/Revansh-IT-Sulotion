@@ -57,7 +57,7 @@ export default function Projects() {
               <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">Our Portfolio</span>
             </motion.div>
             <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-               <span className="text-orange-600">Case Study</span>
+              <span style={{ color: "#064E3B" }}>Case Study</span>
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 font-medium max-w-xl">
               Real-world digital transformation results delivered for global enterprises across various industries.
@@ -81,13 +81,13 @@ export default function Projects() {
             >
               {/* Image Area */}
               <div className="relative h-72 overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60" />
-                
+
                 {/* Badge Overlay */}
                 <div className="absolute top-6 left-6">
                   <span className="px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-[10px] font-black uppercase tracking-widest text-white">
@@ -101,7 +101,7 @@ export default function Projects() {
                 <h3 className="text-2xl font-black mb-6 text-slate-900 dark:text-white leading-tight">
                   {project.title}
                 </h3>
-                
+
                 <div className="space-y-6 mb-10">
                   <div className="flex gap-4">
                     <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center shrink-0 text-red-500">
