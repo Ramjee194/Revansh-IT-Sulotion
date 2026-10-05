@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://orbous.com";
+export const SITE_URL = "https://www.orbous.com";
 export const SITE_NAME = "Orbous";
 
 export interface SeoRoute {
