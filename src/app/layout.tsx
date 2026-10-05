@@ -34,15 +34,18 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://orbous.com"),
   applicationName: "Orbous",
   title: {
-    default: "Orbous | IT & Software Solutions Company in Gurgaon",
+    default: "Orbous | Leading Software & AI Solutions Company",
     template: "%s | Orbous",
   },
   description:
-    "Orbous is an enterprise software engineering, AI innovations, and cloud architecture consultancy headquartered at DLF Cyber City, Gurgaon (PIN 122016). Engineering bespoke, high-performance digital products for global businesses.",
+    "Orbous is a leading web development, mobile app, and AI/ML solutions company in Gurgaon. We build scalable software, mobile apps, and enterprise AI solutions for businesses.",
   keywords: [
     "Orbous",
     "Orbous IT Solutions",
     "Software Company Gurgaon",
+    "AI Solutions Company",
+    "Mobile App Development",
+    "Software Development Gurgaon",
     "DLF Cyber City Tech Companies",
     "IT Company Gurgaon 122016",
     "Cyber City Software Development",
@@ -52,13 +55,17 @@ export const metadata: Metadata = {
     "Full Stack Software Engineering",
   ],
   authors: [{ name: "Orbous Team", url: "https://orbous.com" }],
-  creator: "Orbous IT Solutions",
+  creator: "Orbous IT & Software Solutions",
   publisher: "Orbous",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
@@ -69,10 +76,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://orbous.com",
-    siteName: "Orbous IT & Software Solutions",
-    title: "Orbous IT & Software Solutions | DLF Cyber City Gurgaon (122016)",
+    siteName: "Orbous",
+    title: "Orbous | Leading Software & AI Solutions Company",
     description:
-      "Enterprise software development, AI solutions, and digital transformation headquartered at DLF Cyber City, Gurgaon (PIN 122016).",
+      "Orbous is a leading web development, mobile app, and AI/ML solutions company in Gurgaon. We build scalable software, mobile apps, and enterprise AI solutions for businesses.",
     images: [
       {
         url: "/orbous-logo.png",
@@ -84,9 +91,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Orbous IT & Software Solutions | DLF Cyber City Gurgaon (122016)",
+    title: "Orbous | Leading Software & AI Solutions Company",
     description:
-      "Enterprise software, AI solutions, and cloud engineering at DLF Cyber City, Gurgaon PIN 122016.",
+      "Orbous is a leading web development, mobile app, and AI/ML solutions company in Gurgaon.",
     images: ["/orbous-logo.png"],
   },
   robots: {
@@ -100,8 +107,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  // NOTE: canonical is set per page (see src/lib/seo.ts). A global canonical
-  // here would mark every page as a duplicate of the homepage.
 };
 
 export default function RootLayout({
@@ -117,14 +122,27 @@ export default function RootLayout({
         "@type": "WebSite",
         "@id": "https://orbous.com/#website",
         name: "Orbous",
-        alternateName: ["Orbous IT & Software Solutions", "Orbous IT Solutions", "orbous.com"],
+        alternateName: [
+          "Orbous IT & Software Solutions",
+          "Orbous IT Solutions",
+          "Orbous Technologies",
+          "orbous.com"
+        ],
         url: "https://orbous.com/",
         publisher: { "@id": "https://orbous.com/#organization" },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: "https://orbous.com/services?q={search_term_string}",
+          },
+          "query-input": "required name=search_term_string",
+        },
       },
       {
         "@type": "ItemList",
         "@id": "https://orbous.com/#sitenav",
-        name: "Orbous main navigation",
+        name: "Orbous Main Sitelinks Navigation",
         itemListElement: SEO_ROUTES.filter((r) => r.sitelink).map((r, i) => ({
           "@type": "SiteNavigationElement",
           position: i + 1,
@@ -138,12 +156,12 @@ export default function RootLayout({
         "@id": "https://orbous.com/#organization",
         name: "Orbous",
         legalName: "Orbous IT & Software Solutions",
-        alternateName: "Orbous IT Solutions",
+        alternateName: ["Orbous IT Solutions", "Orbous Technologies"],
         url: "https://orbous.com",
         logo: "https://orbous.com/orbous-logo.png",
         image: "https://orbous.com/orbous-logo.png",
         description:
-          "Enterprise IT, cloud architecture, and AI software engineering consultancy.",
+          "Orbous is a leading web development, mobile app, and AI/ML solutions company in DLF Cyber City, Gurgaon. We build scalable software and enterprise solutions for businesses.",
         email: "contact@orbous.com",
         telephone: "+91-8404827541",
         address: {
@@ -155,6 +173,11 @@ export default function RootLayout({
           postalCode: "122016",
           addressCountry: "IN",
         },
+        sameAs: [
+          "https://www.linkedin.com/company/orbous",
+          "https://twitter.com/orbous",
+          "https://github.com/orbous"
+        ],
       },
       {
         "@type": "LocalBusiness",
@@ -200,9 +223,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

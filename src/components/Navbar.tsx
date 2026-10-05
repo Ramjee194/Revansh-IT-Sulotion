@@ -325,7 +325,7 @@ export default function Navbar() {
 
 
             <Link
-              href="/#about"
+              href="/about"
               className="px-2 py-2 text-[11px] xl:text-[12px] 2xl:text-[13px] font-black transition-colors uppercase tracking-wider whitespace-nowrap text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400"
             >
               About
@@ -548,7 +548,7 @@ export default function Navbar() {
 
 
                   <Link
-                    href="/#about"
+                    href="/about"
                     onClick={() => setIsOpen(false)}
                     className="flex items-center space-x-4 p-3.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-colors group"
                   >
