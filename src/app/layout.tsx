@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://orbous.com"),
+  metadataBase: new URL("https://www.orbous.com"),
   applicationName: "Orbous",
   title: {
     default: "Orbous | Leading Software & AI Solutions Company",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     "Cloud Architecture India",
     "Full Stack Software Engineering",
   ],
-  authors: [{ name: "Orbous Team", url: "https://orbous.com" }],
+  authors: [{ name: "Orbous Team", url: "https://www.orbous.com" }],
   creator: "Orbous IT & Software Solutions",
   publisher: "Orbous",
   icons: {
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://orbous.com",
+    url: "https://www.orbous.com",
     siteName: "Orbous",
     title: "Orbous | Leading Software & AI Solutions Company",
     description:
@@ -120,28 +120,29 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://orbous.com/#website",
+        "@id": "https://www.orbous.com/#website",
         name: "Orbous",
         alternateName: [
           "Orbous IT & Software Solutions",
           "Orbous IT Solutions",
           "Orbous Technologies",
-          "orbous.com"
+          "orbous.com",
+          "www.orbous.com"
         ],
-        url: "https://orbous.com/",
-        publisher: { "@id": "https://orbous.com/#organization" },
+        url: "https://www.orbous.com/",
+        publisher: { "@id": "https://www.orbous.com/#organization" },
         potentialAction: {
           "@type": "SearchAction",
           target: {
             "@type": "EntryPoint",
-            urlTemplate: "https://orbous.com/services?q={search_term_string}",
+            urlTemplate: "https://www.orbous.com/services?q={search_term_string}",
           },
           "query-input": "required name=search_term_string",
         },
       },
       {
         "@type": "ItemList",
-        "@id": "https://orbous.com/#sitenav",
+        "@id": "https://www.orbous.com/#sitenav",
         name: "Orbous Main Sitelinks Navigation",
         itemListElement: SEO_ROUTES.filter((r) => r.sitelink).map((r, i) => ({
           "@type": "SiteNavigationElement",
@@ -153,13 +154,13 @@ export default function RootLayout({
       },
       {
         "@type": "Organization",
-        "@id": "https://orbous.com/#organization",
+        "@id": "https://www.orbous.com/#organization",
         name: "Orbous",
         legalName: "Orbous IT & Software Solutions",
         alternateName: ["Orbous IT Solutions", "Orbous Technologies"],
-        url: "https://orbous.com",
-        logo: "https://orbous.com/orbous-logo.png",
-        image: "https://orbous.com/orbous-logo.png",
+        url: "https://www.orbous.com",
+        logo: "https://www.orbous.com/orbous-logo.png",
+        image: "https://www.orbous.com/orbous-logo.png",
         description:
           "Orbous is a leading web development, mobile app, and AI/ML solutions company in DLF Cyber City, Gurgaon. We build scalable software and enterprise solutions for businesses.",
         email: "contact@orbous.com",
@@ -181,10 +182,10 @@ export default function RootLayout({
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://orbous.com/#localbusiness",
+        "@id": "https://www.orbous.com/#localbusiness",
         name: "Orbous IT & Software Solutions - Gurgaon Cyber City",
-        image: "https://orbous.com/orbous-logo.png",
-        url: "https://orbous.com",
+        image: "https://www.orbous.com/orbous-logo.png",
+        url: "https://www.orbous.com",
         telephone: "+91-8404827541",
         priceRange: "$$",
         address: {
