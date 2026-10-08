@@ -77,7 +77,7 @@ export default function LocationBar({ variant = "full", className = "" }: Locati
     <div className={`relative overflow-hidden rounded-3xl border border-[#F8E7C9]/30 bg-gradient-to-br from-[#064E3B] via-[#043629] to-[#021F17] text-[#F8E7C9] p-6 sm:p-8 lg:p-10 shadow-2xl ${className}`}>
       {/* Subtle luxury ambient sheen */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#F8E7C9]/5 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
-      
+
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Column: Office Meta Details */}
         <div className="lg:col-span-7 space-y-5">
@@ -104,7 +104,7 @@ export default function LocationBar({ variant = "full", className = "" }: Locati
             </p>
           </div>
 
-          {/* Key Location Highlights Grid */}
+          {/* Key Location Highligh */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
             <div className="flex items-start gap-3 p-3 rounded-2xl bg-white/5 border border-[#F8E7C9]/15">
               <Train size={18} className="text-[#F8E7C9] shrink-0 mt-0.5" />
