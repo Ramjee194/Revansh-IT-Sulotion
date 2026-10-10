@@ -233,16 +233,19 @@ export default function CareersPage() {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/careers/apply", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: data.fullName,
+          fullName: data.fullName,
           email: data.email,
           phone: data.phone,
-          subject: `Job Application: ${selectedJob?.title || "General Application"}`,
-          message: `Applicant Details:\n- Role: ${selectedJob?.title}\n- Experience: ${data.experience}\n- Location: ${data.location || "Not specified"}\n- Notice Period: ${data.noticePeriod || "Not specified"}\n- Portfolio/LinkedIn: ${data.linkedin}\n- Resume Attached: ${resumeFile.name} (${resumeFile.size})\n- Cover Note:\n${data.coverNote || "None"}`,
-          service: "Careers / Hiring",
+          role: selectedJob?.title || "General Application",
+          experience: data.experience || "Not specified",
+          location: data.location || "Not specified",
+          noticePeriod: data.noticePeriod || "Not specified",
+          linkedin: data.linkedin || "",
+          coverNote: data.coverNote || "",
           attachment: {
             filename: resumeFile.name,
             content: resumeFile.base64

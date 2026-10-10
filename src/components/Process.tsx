@@ -12,31 +12,31 @@ import {
 const steps = [
   { 
     title: "Discovery", 
-    desc: "We analyze your business ecosystem to find growth opportunities.",
+    desc: "In-depth technical feasibility audit, requirement scoping, and architecture roadmap planning.",
     icon: <RiSearchEyeLine className="w-8 h-8" />,
     label: "Phase 01"
   },
   { 
-    title: "Strategy", 
-    desc: "Crafting a high-precision roadmap tailored to your specific goals.",
+    title: "UI/UX & Architecture", 
+    desc: "Interactive Figma design systems, database schemas, and click-through prototypes.",
     icon: <RiLightbulbFlashLine className="w-8 h-8" />,
     label: "Phase 02"
   },
   { 
-    title: "Execution", 
-    desc: "High-speed development and campaign launch with expert support.",
+    title: "Sprint Engineering", 
+    desc: "Bi-weekly agile development cycles, clean modular coding, and continuous CI/CD integration.",
     icon: <RiRocket2Line className="w-8 h-8" />,
     label: "Phase 03"
   },
   { 
-    title: "Optimization", 
-    desc: "Continuous monitoring and data-driven performance tuning.",
+    title: "QA & Security Audits", 
+    desc: "VAPT penetration testing, multi-device cross-browser testing, and SLA performance benchmarking.",
     icon: <RiSettings4Line className="w-8 h-8" />,
     label: "Phase 04"
   },
   { 
-    title: "Scale", 
-    desc: "Expanding your digital reach to dominate the global market.",
+    title: "Deploy & AMC Support", 
+    desc: "Zero-downtime cloud deployment, 24/7 server health telemetry, and ongoing maintenance.",
     icon: <RiPieChart2Line className="w-8 h-8" />,
     label: "Phase 05"
   }

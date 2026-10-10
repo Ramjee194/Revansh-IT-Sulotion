@@ -7,20 +7,41 @@ import { Menu, X, ChevronRight, ChevronDown, ShieldCheck, Palette } from "lucide
 import { useTheme } from "next-themes";
 import Logo from "./Logo";
 import {
-  FaCode,
-  FaSearch,
   FaArrowRight,
-  FaCommentDots,
-  FaUsers,
-  FaFileAlt,
-  FaHome,
-  FaInfoCircle,
-  FaEnvelope,
   FaWhatsapp,
+  FaHome,
+  FaCode,
+  FaInfo,
+  FaUsers,
+  FaBookOpen,
   FaBriefcase,
-  FaBookOpen
+  FaEnvelope
 } from "react-icons/fa";
-import { RiUserSearchLine, RiBarChartBoxLine, RiMessage2Line } from "react-icons/ri";
+import { 
+  RiUserSearchLine, 
+  RiBarChartBoxLine, 
+  RiMessage2Line,
+  RiHome4Fill,
+  RiCodeSSlashFill,
+  RiInformationFill,
+  RiTeamFill,
+  RiBook2Fill,
+  RiBriefcase4Fill,
+  RiMailFill,
+  RiMessage3Fill,
+  RiMessage3Line,
+  RiWhatsappFill,
+  RiWhatsappLine,
+  RiGlobalLine,
+  RiWindowLine,
+  RiSearchEyeLine,
+  RiSearchLine,
+  RiMegaphoneFill,
+  RiMegaphoneLine,
+  RiFileTextFill,
+  RiFileList3Line,
+  RiPhoneFill
+} from "react-icons/ri";
 import type { IconType } from "react-icons";
 import {
   PiShieldCheck, PiMagnifyingGlass, PiPenNib, PiCode, PiChatText, PiMegaphone,
@@ -136,12 +157,12 @@ const servicesData: ServiceCategory[] = [
 ];
 
 const quickAccess: { name: string; icon: IconType; href: string }[] = [
-  { name: "SMS", icon: PiChatText, href: "/services/sms-service/promotional-sms" },
-  { name: "WhatsApp", icon: PiWhatsappLogo, href: "/services/sms-service/whatsapp-business-api" },
-  { name: "Website", icon: PiBrowser, href: "/services/web-service/premium-web-design" },
-  { name: "SEO", icon: PiMagnifyingGlass, href: "/services/seo-services" },
-  { name: "Social", icon: PiMegaphone, href: "/services/smm-services/meta-fb-ig-advertising" },
-  { name: "Get Quote", icon: PiClipboardText, href: "/packages/custom-quote" },
+  { name: "SMS", icon: RiMessage3Line, href: "/services/sms-service/promotional-sms" },
+  { name: "WhatsApp", icon: FaWhatsapp, href: "/services/sms-service/whatsapp-business-api" },
+  { name: "Website", icon: RiWindowLine, href: "/services/web-service/premium-web-design" },
+  { name: "SEO", icon: RiSearchLine, href: "/services/seo-services" },
+  { name: "Social", icon: RiMegaphoneLine, href: "/services/smm-services/meta-fb-ig-advertising" },
+  { name: "Get Quote", icon: RiFileList3Line, href: "/packages/custom-quote" },
 ];
 
 export default function Navbar() {
@@ -404,7 +425,7 @@ export default function Navbar() {
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="w-full max-w-[320px] h-full bg-white dark:bg-slate-950 overflow-y-auto"
+                className="w-full max-w-[320px] h-full bg-[#030914] text-white overflow-y-auto border-l border-slate-800/80 shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Drawer Header */}
@@ -426,9 +447,9 @@ export default function Navbar() {
                 </div>
 
                 {/* Quick Access */}
-                <div className="p-4 bg-slate-50 dark:bg-slate-900/40">
-                  <p className="text-xs font-medium text-slate-400 dark:text-slate-500 mb-3">Quick links</p>
-                  <div className="grid grid-cols-3 gap-2">
+                <div className="p-4 bg-[#050D1A]/95 border-b border-slate-800/80">
+                  <p className="text-xs font-semibold text-slate-400 mb-3 tracking-wide">Quick links</p>
+                  <div className="grid grid-cols-3 gap-2.5">
                     {quickAccess.map((item) => {
                       const QIcon = item.icon;
                       return (
@@ -436,10 +457,10 @@ export default function Navbar() {
                           key={item.name}
                           href={item.href}
                           onClick={() => setIsOpen(false)}
-                          className="flex flex-col items-center gap-1.5 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-[#064E3B] dark:hover:border-[#F8E7C9]/60 transition-colors"
+                          className="flex flex-col items-center justify-center gap-2 py-3 px-1.5 bg-[#0A1628]/90 border border-slate-800/90 rounded-2xl hover:border-blue-500/50 hover:bg-[#0E1E38] transition-all group shadow-sm"
                         >
-                          <QIcon size={22} className="text-[#064E3B] dark:text-[#F8E7C9]" />
-                          <span className="text-[11px] font-medium text-slate-700 dark:text-slate-300">{item.name}</span>
+                          <QIcon size={24} className="text-slate-300 group-hover:text-white transition-colors" />
+                          <span className="text-[11px] font-bold text-slate-300 group-hover:text-white transition-colors leading-none tracking-tight">{item.name}</span>
                         </Link>
                       );
                     })}
@@ -447,33 +468,34 @@ export default function Navbar() {
                 </div>
 
                 {/* Navigation Links */}
-                <div className="p-2 space-y-1">
+                <div className="p-3.5 space-y-1.5 bg-[#030914] min-h-[420px]">
+                  {/* Home */}
                   <Link
                     href="/"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-4 p-3.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-colors group"
+                    className="flex items-center space-x-4 p-3 rounded-2xl hover:bg-white/5 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                      <FaHome size={13} />
+                    <div className="w-10 h-10 rounded-full bg-[#0052CC] flex items-center justify-center text-white shadow-md shadow-blue-900/30 shrink-0">
+                      <FaHome size={17} />
                     </div>
-                    <span className="font-black text-xs uppercase tracking-wider text-slate-900 dark:text-white">Home</span>
+                    <span className="font-extrabold text-sm tracking-wider text-white uppercase">HOME</span>
                   </Link>
 
                   {/* Services Mobile Accordion */}
                   <div className="space-y-1">
                     <button
                       onClick={() => setServicesMobileOpen(!servicesMobileOpen)}
-                      className="w-full flex items-center justify-between p-3.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-colors group"
+                      className="w-full flex items-center justify-between p-3 rounded-2xl hover:bg-white/5 transition-colors group"
                     >
                       <div className="flex items-center space-x-4">
-                        <div className="w-8 h-8 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-500">
-                          <FaCode size={13} />
+                        <div className="w-10 h-10 rounded-full bg-[#3B3DBF] flex items-center justify-center text-white shadow-md shadow-indigo-900/30 shrink-0">
+                          <FaCode size={17} />
                         </div>
-                        <span className={`font-black text-xs uppercase tracking-wider ${servicesMobileOpen ? "text-primary" : "text-slate-900 dark:text-white"}`}>
-                          Services
+                        <span className="font-extrabold text-sm tracking-wider text-white uppercase">
+                          SERVICES
                         </span>
                       </div>
-                      <ChevronDown size={14} className={`transition-transform duration-300 ${servicesMobileOpen ? "rotate-180 text-primary" : "text-slate-400"}`} />
+                      <ChevronDown size={16} className={`transition-transform duration-300 ${servicesMobileOpen ? "rotate-180 text-blue-400" : "text-slate-400"}`} />
                     </button>
 
                     <AnimatePresence>
@@ -482,7 +504,7 @@ export default function Navbar() {
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          className="overflow-hidden pl-6 pr-2 space-y-1 bg-slate-50/50 dark:bg-slate-900/20 rounded-xl"
+                          className="overflow-hidden pl-4 pr-2 space-y-1 bg-[#061224] rounded-2xl p-2.5 border border-slate-800"
                         >
                           {servicesData.map((category, idx) => {
                             const CatIcon = category.icon;
@@ -491,13 +513,13 @@ export default function Navbar() {
                             <div key={idx} className="space-y-1">
                               <button
                                 onClick={() => toggleMobileSubCategory(category.name)}
-                                className="w-full flex items-center justify-between py-2.5 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/40 text-left"
+                                className="w-full flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-white/5 text-left transition-colors"
                               >
-                                <span className={`flex items-center gap-2.5 text-sm font-medium ${catOpen ? "text-[#064E3B] dark:text-[#F8E7C9]" : "text-slate-800 dark:text-slate-200"}`}>
-                                  <CatIcon size={18} className={catOpen ? "" : "text-slate-400"} />
+                                <span className={`flex items-center gap-2.5 text-xs font-bold ${catOpen ? "text-[#F8E7C9]" : "text-slate-200"}`}>
+                                  <CatIcon size={17} className={catOpen ? "text-[#F8E7C9]" : "text-slate-400"} />
                                   {category.displayName}
                                 </span>
-                                <ChevronDown size={14} className={`transition-transform duration-300 ${catOpen ? "rotate-180 text-[#064E3B] dark:text-[#F8E7C9]" : "text-slate-400"}`} />
+                                <ChevronDown size={13} className={`transition-transform duration-300 ${catOpen ? "rotate-180 text-[#F8E7C9]" : "text-slate-400"}`} />
                               </button>
 
                               <AnimatePresence>
@@ -515,10 +537,10 @@ export default function Navbar() {
                                           key={sub.name}
                                           href={sub.href}
                                           onClick={() => setIsOpen(false)}
-                                          className="flex items-center gap-2.5 py-2 px-2 rounded-md text-[13px] text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-[#064E3B] dark:hover:text-[#F8E7C9]"
+                                          className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-xs text-slate-400 hover:bg-white/5 hover:text-[#F8E7C9]"
                                         >
-                                          <SubIcon size={16} className="shrink-0 text-slate-400" />
-                                          {sub.name}
+                                          <SubIcon size={14} className="shrink-0 text-slate-400" />
+                                          <span className="truncate">{sub.name}</span>
                                         </Link>
                                       );
                                     })}
@@ -526,9 +548,9 @@ export default function Navbar() {
                                       <Link
                                         href={category.href}
                                         onClick={() => setIsOpen(false)}
-                                        className="inline-flex items-center gap-1 text-xs font-medium text-[#064E3B] dark:text-[#F8E7C9] px-2 py-1 hover:underline"
+                                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#F8E7C9] px-2 py-1 hover:underline"
                                       >
-                                        View {category.displayName} <PiArrowRight size={12} />
+                                        View {category.displayName} <PiArrowRight size={11} />
                                       </Link>
                                     </div>
                                   </motion.div>
@@ -542,76 +564,97 @@ export default function Navbar() {
                     </AnimatePresence>
                   </div>
 
-
-
-
-
-
+                  {/* About */}
                   <Link
                     href="/about"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-4 p-3.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-colors group"
+                    className="flex items-center space-x-4 p-3 rounded-2xl hover:bg-white/5 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-colors">
-                      <FaInfoCircle size={13} />
+                    <div className="w-10 h-10 rounded-full bg-[#D97706] flex items-center justify-center text-white shadow-md shadow-amber-900/30 shrink-0">
+                      <FaInfo size={15} />
                     </div>
-                    <span className="font-black text-xs uppercase tracking-wider text-slate-900 dark:text-white">About</span>
+                    <span className="font-extrabold text-sm tracking-wider text-white uppercase">ABOUT</span>
                   </Link>
 
+                  {/* Our Team */}
                   <Link
                     href="/team"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-4 p-3.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-colors group"
+                    className="flex items-center space-x-4 p-3 rounded-2xl hover:bg-white/5 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                      <FaUsers size={13} />
+                    <div className="w-10 h-10 rounded-full bg-[#0284C7] flex items-center justify-center text-white shadow-md shadow-cyan-900/30 shrink-0">
+                      <FaUsers size={16} />
                     </div>
-                    <span className="font-black text-xs uppercase tracking-wider text-slate-900 dark:text-white">Our Team</span>
+                    <span className="font-extrabold text-sm tracking-wider text-white uppercase">OUR TEAM</span>
                   </Link>
 
+                  {/* Blog */}
                   <Link
                     href="/blog"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-4 p-3.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-colors group"
+                    className="flex items-center space-x-4 p-3 rounded-2xl hover:bg-white/5 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-500 group-hover:bg-purple-500 group-hover:text-white transition-colors">
-                      <FaBookOpen size={13} />
+                    <div className="w-10 h-10 rounded-full bg-[#7C3AED] flex items-center justify-center text-white shadow-md shadow-purple-900/30 shrink-0">
+                      <FaBookOpen size={16} />
                     </div>
-                    <span className="font-black text-xs uppercase tracking-wider text-slate-900 dark:text-white">Blog</span>
+                    <span className="font-extrabold text-sm tracking-wider text-white uppercase">BLOG</span>
                   </Link>
 
+                  {/* Careers */}
                   <Link
                     href="/careers"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-4 p-3.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-colors group"
+                    className="flex items-center space-x-4 p-3 rounded-2xl hover:bg-white/5 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-[#064E3B]/10 text-[#064E3B] dark:bg-[#F8E7C9]/15 dark:text-[#F8E7C9] flex items-center justify-center transition-colors">
-                      <FaBriefcase size={13} />
+                    <div className="w-10 h-10 rounded-full bg-[#475569] flex items-center justify-center text-white shadow-md shadow-slate-900/30 shrink-0">
+                      <FaBriefcase size={16} />
                     </div>
                     <div className="flex items-center justify-between flex-1">
-                      <span className="font-black text-xs uppercase tracking-wider text-slate-900 dark:text-white">Careers</span>
-                      <span className="px-2 py-0.5 rounded-full text-[8px] font-black bg-[#F8E7C9] text-[#064E3B]">HIRING</span>
+                      <span className="font-extrabold text-sm tracking-wider text-white uppercase">CAREERS</span>
+                      <span className="px-2 py-0.5 rounded-full text-[8px] font-black bg-[#F8E7C9] text-[#064E3B]">
+                        HIRING
+                      </span>
                     </div>
                   </Link>
 
+                  {/* Contact */}
                   <Link
                     href="/#contact"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-4 p-3.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-colors group"
+                    className="flex items-center space-x-4 p-3 rounded-2xl hover:bg-white/5 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-teal-500/10 flex items-center justify-center text-teal-500 group-hover:bg-teal-500 group-hover:text-white transition-colors">
-                      <FaEnvelope size={13} />
+                    <div className="w-10 h-10 rounded-full bg-[#059669] flex items-center justify-center text-white shadow-md shadow-emerald-900/30 shrink-0">
+                      <FaEnvelope size={16} />
                     </div>
-                    <span className="font-black text-xs uppercase tracking-wider text-slate-900 dark:text-white">Contact</span>
+                    <span className="font-extrabold text-sm tracking-wider text-white uppercase">CONTACT</span>
                   </Link>
                 </div>
 
-                {/* Footer Get Started Button */}
-                <div className="p-4 mt-6">
+                {/* Direct Action Connect Bar */}
+                <div className="p-4 border-t border-slate-800 space-y-2.5 bg-[#050D1A]">
+                  <div className="grid grid-cols-2 gap-2">
+                    <a
+                      href="tel:+918404827541"
+                      className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-white text-slate-950 font-black text-[11px] uppercase tracking-wider shadow-sm"
+                    >
+                      <RiPhoneFill size={14} />
+                      Call Us
+                    </a>
+                    <a
+                      href="https://wa.me/918404827541"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[#25D366] text-white font-black text-[11px] uppercase tracking-wider shadow-sm"
+                    >
+                      <RiWhatsappFill size={16} />
+                      WhatsApp
+                    </a>
+                  </div>
+
                   <Link
                     href="/#contact"
                     onClick={() => setIsOpen(false)}
-                    className="w-full btn-champagne flex justify-center py-3.5 rounded-2xl shadow-xl text-xs uppercase tracking-widest font-black"
+                    className="w-full btn-champagne flex justify-center py-3.5 rounded-xl shadow-lg text-xs uppercase tracking-widest font-black"
                   >
                     Get Free Quote Now
                   </Link>

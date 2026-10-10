@@ -5,9 +5,10 @@ import { Smartphone, Play, Apple, Star, Download, ShieldCheck, Zap, MessageSquar
 import { useState, useEffect } from "react";
 
 const liveMessages = [
-  { id: 1, phone: "+91 98XXX XXX01", status: "Delivered", time: "Just now" },
-  { id: 2, phone: "+91 70XXX XXX42", status: "Sent", time: "2s ago" },
-  { id: 3, phone: "+91 88XXX XXX99", status: "Delivered", time: "5s ago" },
+  { id: 1, phone: "+91 9811X X4201", type: "OTP Verified", location: "Gurgaon", status: "Delivered", time: "0.3s ago" },
+  { id: 2, phone: "+91 7042X X8910", type: "Promo Campaign", location: "Bangalore", status: "Delivered", time: "1.2s ago" },
+  { id: 3, phone: "+91 8800X X1234", type: "WhatsApp API", location: "Mumbai", status: "Delivered", time: "2.4s ago" },
+  { id: 4, phone: "+91 9560X X7711", type: "Transactional", location: "Delhi NCR", status: "Delivered", time: "Just now" },
 ];
 
 export default function AppShowcase() {
@@ -16,7 +17,7 @@ export default function AppShowcase() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveMessage((prev) => (prev + 1) % liveMessages.length);
-    }, 3000);
+    }, 2800);
     return () => clearInterval(interval);
   }, []);
 
@@ -36,26 +37,28 @@ export default function AppShowcase() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6"
             >
+              <Zap size={14} className="text-amber-400" />
+              <span className="text-[10px] font-black uppercase tracking-widest text-amber-400">Enterprise Telemetry</span>
             </motion.div>
 
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="flex gap-1 text-xl md:text-3xl font-black mb-8   "
+              className="text-3xl md:text-5xl font-black mb-6 tracking-tight text-white leading-[1.15]"
             >
-              Manage Your  {""}<br />
-              <span className=" text-amber-500 ">Campaigns</span>
+              Live Campaign &amp;{" "}<br />
+              <span className="text-amber-500">Delivery Dashboard</span>
             </motion.h2>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-lg md:text-xl text-blue-50/80 mb-12 max-w-xl leading-relaxed font-medium"
+              className="text-base md:text-lg text-slate-300 mb-10 max-w-xl leading-relaxed font-normal"
             >
-              Experience the power of real-time monitoring. Our mobile dashboard provides
-              instant insights into delivery rates, latency, and global throughput.
+              Monitor enterprise SMS gateways, WhatsApp Business API broadcasts, and cloud servers in real-time with sub-second delivery latency and 99.99% uptime telemetry.
             </motion.p>
 
             {/* Interactive Live Tracker Mockup */}
@@ -78,15 +81,18 @@ export default function AppShowcase() {
                     className="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-200">
+                      <div className="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center text-amber-400">
                         <Send size={18} />
                       </div>
                       <div>
-                        <p className="font-bold text-sm">{liveMessages[activeMessage].phone}</p>
-                        <p className="text-[10px] opacity-60">{liveMessages[activeMessage].time}</p>
+                        <div className="flex items-center gap-2">
+                          <p className="font-bold text-sm text-white">{liveMessages[activeMessage].phone}</p>
+                          <span className="text-[10px] px-2 py-0.5 rounded bg-white/10 text-amber-300 font-semibold">{liveMessages[activeMessage].type}</span>
+                        </div>
+                        <p className="text-[10px] text-slate-400">{liveMessages[activeMessage].location} • {liveMessages[activeMessage].time}</p>
                       </div>
                     </div>
-                    <div className="px-3 py-1 rounded-full bg-green-500/20 border border-green-500/30 text-[10px] font-black text-green-400">
+                    <div className="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-[10px] font-black text-emerald-400">
                       {liveMessages[activeMessage].status}
                     </div>
                   </motion.div>

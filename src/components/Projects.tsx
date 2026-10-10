@@ -5,32 +5,32 @@ import { ExternalLink, TrendingUp, CheckCircle2, AlertCircle, ArrowRight } from 
 
 const projects = [
   {
-    title: "AI Customer Support Platform",
-    category: "AI & Automation",
-    problem: "Inefficient manual customer support leading to high churn.",
-    solution: "Generative AI platform with custom NLP for automated resolution.",
-    impact: "70% reduction in response time.",
-    tech: ["Next.js", "Python", "OpenAI", "Redis"],
+    title: "Multi-Channel SMS & OTP Gateway Engine",
+    category: "Telecom & Cloud Messaging",
+    problem: "Telecom bottlenecks and message drop-offs causing delayed OTP verifications and lost customer transactions.",
+    solution: "Distributed high-throughput routing engine with automatic carrier failover and sub-500ms delivery SLA.",
+    impact: "99.98% OTP Delivery Rate & 5M+ Daily Volume",
+    tech: ["Next.js", "Node.js", "Redis Cluster", "Kafka", "AWS ECS"],
     image: "/ai_support_dashboard_1778922048539.png",
     color: "from-blue-600 to-indigo-600"
   },
   {
-    title: "Real Estate Marketplace",
-    category: "PropTech",
-    problem: "Fragmented property listings and lack of transparent valuation.",
-    solution: "Blockchain-backed marketplace with AI valuation engine.",
-    impact: "40% increase in lead conversion.",
-    tech: ["React", "Node.js", "AWS", "PostgreSQL"],
+    title: "B2B Cloud ERP & Asset Management Platform",
+    category: "Enterprise Software & SaaS",
+    problem: "Fragmented spreadsheets, manual invoicing errors, and lack of real-time inventory tracking across regional branches.",
+    solution: "Centralized multi-tenant SaaS portal with automated GST billing, role-based access, and instant inventory sync.",
+    impact: "42% Reduction in Operational Overhead",
+    tech: ["React", "PostgreSQL", "Node.js", "Docker", "Tailwind CSS"],
     image: "/real_estate_marketplace_1778922069016.png",
     color: "from-emerald-600 to-teal-600"
   },
   {
-    title: "Smart Building Dashboard",
-    category: "IoT",
-    problem: "High energy wastage in commercial buildings.",
-    solution: "IoT sensors and real-time dashboard for energy optimization.",
-    impact: "25% energy savings annually.",
-    tech: ["Vue.js", "MQTT", "Go", "InfluxDB"],
+    title: "Real-Time Fleet & Cold-Chain IoT Dashboard",
+    category: "Industrial IoT & Telematics",
+    problem: "Inability to monitor cold-chain storage temperatures and live route deviations leading to inventory spoilage.",
+    solution: "IoT sensor telemetry pipeline with live GPS tracking, instant temperature breach alerts, and predictive maintenance.",
+    impact: "35% Fuel Optimization & Zero Cargo Loss",
+    tech: ["Next.js", "MQTT", "InfluxDB", "Go", "TimescaleDB"],
     image: "/smart_building_iot_1778922090777.png",
     color: "from-orange-600 to-amber-600"
   }

@@ -10,104 +10,64 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
   {
-    name: "Devansh Ramjee",
-    role: "Founder & CEO",
-    bio: "Visionary leader driving Orbous towards engineering scalable, high-performance IT solutions for global enterprises. Passionate about software craftsmanship and AI integration.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+    name: "Ram (Ramjee)",
+    role: "Founder & Managing Director / CEO",
+    bio: "Visionary founder steering Orbous towards high-performance enterprise software, scalable telecom SMS gateways, and cloud architecture across India and global markets.",
+    image: "/team_ram.jpg",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
-    email: "devansh@orbous.com",
-    specialty: "Strategy & Operations"
+    email: "ramjee@orbous.com",
+    specialty: "Strategy & Cloud Leadership"
   },
   {
-    name: "Amit Sharma",
-    role: "Chief Technology Officer",
-    bio: "System architect specializing in cloud infrastructure, databases, and microservices. Amit ensures Orbous solutions remain highly available and fault-tolerant.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
+    name: "Priyam Kumar Dubey",
+    role: "Technical Lead & Solutions Architect",
+    bio: "Lead architect overseeing distributed microservices, low-latency API pipelines, Next.js frameworks, and high-concurrency database engineering with robust fault tolerance.",
+    image: "/team_priyam.jpg",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
-    email: "amit@orbous.com",
-    specialty: "High-Availability Infrastructure"
+    email: "priyam@orbous.com",
+    specialty: "System Architecture & Scaling"
   },
   {
-    name: "Sarah Jenkins",
-    role: "Head of Engineering",
-    bio: "Next.js core contributor and distributed systems expert. Sarah leads our development pods in building pixel-perfect frontends and solid backend services.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop",
+    name: "Ankit Kumar",
+    role: "Digital & Content Management Lead",
+    bio: "Strategist driving multi-channel digital campaigns, content management pipelines, enterprise SEO optimization, and brand engagement frameworks.",
+    image: "/team_ankit.jpg",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
-    email: "sarah@orbous.com",
-    specialty: "Next.js & Kubernetes"
+    email: "ankit@orbous.com",
+    specialty: "Digital & Content Management"
   },
   {
-    name: "Elena Rostova",
-    role: "VP of Growth & SEO",
-    bio: "Marketing genius with an engineering mindset. Elena crafts high-converting campaign structures, viral hooks, and dominates search indexing patterns globally.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop",
+    name: "Shamshul Ansari",
+    role: "Full Stack Developer",
+    bio: "Full-stack specialist engineering scalable web applications in Next.js, Node.js, and TypeScript with secure database architecture and RESTful/GraphQL APIs.",
+    image: "/team_shamshul.jpg",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
-    email: "elena@orbous.com",
-    specialty: "Algorithmic Marketing"
+    email: "shamshul@orbous.com",
+    specialty: "Full Stack Development & APIs"
   },
   {
-    name: "Marcus Aurelius",
-    role: "Head of Global Client Relations",
-    bio: "A strategic communication specialist coordinating enterprise integrations and client satisfaction across Europe and North America.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop",
+    name: "Dhiraj Kumar Yadav",
+    role: "Software Developer",
+    bio: "Core software developer creating performant backend algorithms, third-party integrations, high-speed transactional logic, and responsive UI components.",
+    image: "/team_dhiraj.jpg",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
-    email: "marcus@orbous.com",
-    specialty: "Client Relations & Scaling"
+    email: "dhiraj@orbous.com",
+    specialty: "Software Engineering & Systems"
   },
   {
-    name: "Rajesh Nair",
-    role: "Principal AI Scientist",
-    bio: "Specialist in natural language processing and agentic modeling. Rajesh leads the algorithmic development of our conversational support layers.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+    name: "Abhishek",
+    role: "Business Development Executive (BDE)",
+    bio: "Connecting enterprise clients with tailored IT, telecom SMS, and custom software solutions while ensuring seamless project onboarding and client satisfaction.",
+    image: "/team_abhishek.jpg",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
-    email: "rajesh@orbous.com",
-    specialty: "NLP & LLM Tuning"
-  },
-  {
-    name: "Chloe Mercer",
-    role: "Senior UI/UX Architect",
-    bio: "Creating responsive, interactive web interfaces with micro-animations. Chloe focuses on conversion rate optimization and premium visual layouts.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    email: "chloe@orbous.com",
-    specialty: "Human-Centered Design"
-  },
-  {
-    name: "Vikram Malhotra",
-    role: "Lead DevOps Engineer",
-    bio: "Ensuring container reliability and zero-downtime deployments. Vikram manages our multi-region Kubernetes clusters and automated CI/CD pipelines.",
-    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=600&auto=format&fit=crop",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    email: "vikram@orbous.com",
-    specialty: "DevOps & Cloud Security"
-  },
-  {
-    name: "Lisa Vance",
-    role: "Senior SEO Strategist",
-    bio: "Analyzing search intent and optimizing technical page indices. Lisa has successfully scaled organic search visibility for dozens of international startups.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    email: "lisa@orbous.com",
-    specialty: "Technical SEO Audit"
-  },
-  {
-    name: "David Vance",
-    role: "Quality Assurance Lead",
-    bio: "Creating automated end-to-end testing suites to ensure bulletproof software. David tests for load capacity, visual regressions, and security compliance.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    email: "david@orbous.com",
-    specialty: "Automated Testing & QA"
+    email: "abhishek@orbous.com",
+    specialty: "B2B Growth & Enterprise Relations"
   }
 ];
 
@@ -159,7 +119,7 @@ export default function TeamPage() {
       {/* Team Grid Section */}
       <section className="py-24 bg-white dark:bg-[#020617] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
